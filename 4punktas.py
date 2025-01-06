@@ -1,5 +1,3 @@
-
-
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
@@ -57,7 +55,7 @@ option.click()
 time.sleep(5)
 
 
-editedMsg = driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/div/div/div/form/div[1]/div[2]/div/textarea')
+editedMsg = driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div/div[1]/div/div[2]/li/ul/li[2]/p')
 editedMsg.send_keys("labas")
 
 post = driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/div/div/div/form/div[3]/button')
@@ -99,5 +97,4 @@ option.click()
 time.sleep(1)
 confirmDel1 = driver.find_element(By.XPATH, '//*[@id="app"]/div[3]/div/div/div/div[3]/button[2]')
 confirmDel1.click()
-
 time.sleep(555)

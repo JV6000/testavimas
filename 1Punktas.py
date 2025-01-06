@@ -75,11 +75,12 @@ job_category =  wait.until(EC.presence_of_element_located((By.XPATH, "/html[1]/b
 job_category.send_keys("Craft Workers")
 time.sleep(10)
 
-sub_unit = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/div[1]")))
-sub_unit.click()
-time.sleep(5)
-driver.find_element(By.XPATH, "//div[@role='option']//span[contains(text(),'Administration')]").click()
-time.sleep(5)
+# sub_unit = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/div[5]/div[1]/div[2]/div[1]/div[1]/div[1]")))
+# sub_unit.click()
+# time.sleep(5)
+
+# driver.find_element(By.XPATH, "//div[@role='option']//span[contains(text(),'Administration')]").click()
+# time.sleep(5)
 
 location = wait.until(EC.presence_of_element_located((By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/div[6]/div[1]/div[2]/div[1]/div[1]/div[1]")))
 location.send_keys("Canadian Regional HQ")

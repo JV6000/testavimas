@@ -6,7 +6,7 @@ from selenium.webdriver import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-# create instance of webdriver
+
 driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 10)
 

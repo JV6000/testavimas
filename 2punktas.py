@@ -12,7 +12,7 @@ driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 10)
 driver.maximize_window()
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList")
-time.sleep(3)
+time.sleep(5)
 loginName = driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input')
 loginName.send_keys("Admin")
 
@@ -21,25 +21,26 @@ loginPassword.send_keys("admin123")
 
 loginButton = driver.find_element(By.XPATH,'//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button')
 loginButton.click()
-time.sleep(2)
+time.sleep(5)
 
 employee_id = wait.until(EC.presence_of_element_located((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/input[1]")))
-employee_id.send_keys("0317")
+employee_id.send_keys("03107")
 
-press_search = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]")))
+press_search = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]")))
 press_search.click()
+time.sleep(5)
 
 press_employee = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]")))
 press_employee.click()
 
-
+time.sleep(5)
 
 
 vartotojo_tikras_vardas = wait.until(EC.presence_of_element_located((By.NAME, "firstName")))
 vartotojo_tikras_vardas.send_keys(Keys.CONTROL + "a", Keys.BACKSPACE)
 vartotojo_tikras_vardas.send_keys("Juozas")
 
-
+time.sleep(5)
 middle_name = wait.until(EC.presence_of_element_located((By.NAME, "middleName")))
 middle_name.send_keys(Keys.CONTROL + "a", Keys.BACKSPACE)
 middle_name.send_keys("Tomashas")
@@ -56,11 +57,11 @@ other_ID.send_keys("123")
 driver_license_number = wait.until(EC.presence_of_element_located((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/input[1]")))
 driver_license_number.send_keys(Keys.CONTROL + "a", Keys.BACKSPACE)
 driver_license_number.send_keys("123")
-
+time.sleep(5)
 nationality = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]")))
 nationality.click()
 driver.find_element(By.XPATH, "//div[@role='option']//span[contains(text(),'Lithuanian')]").click()
-time.sleep(2)
+time.sleep(5)
 
 martial_status = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]")))
 martial_status.click()
@@ -70,16 +71,15 @@ time.sleep(2)
 birth_date = wait.until(EC.presence_of_element_located((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]")))
 birth_date.send_keys(Keys.CONTROL + "a", Keys.BACKSPACE)
 birth_date.send_keys("1990-11-12")
-time.sleep(2)
-
+time.sleep(5)
 
 male_female = wait.until(EC.element_to_be_clickable((By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[2]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]")))
 male_female.click()
-
+time.sleep(5)
 save_main_info = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/form/div[5]/button")))
 save_main_info.click()
 
-
+time.sleep(5)
 """ 2a forma"""
 
 
